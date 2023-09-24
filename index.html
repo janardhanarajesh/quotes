@@ -1,22 +1,19 @@
 <!doctype html>
 <html>
     <head>
-        <title>quotes</title>
+        <title>the index</title>
         <style>
             *{
-                box-sizing:border-box
+                box-sizing:border-box;
+                margin: 0px;
+                padding:0px;
             }
             body{
-                background-image: url(quote.jpg);
-                background-size: cover;
-                text-align: center;
-
-                background-repeat: no-repeat;
-                background-blend-mode: lighten;
+              
             }
             #thequote{
-                height: 500px;
-                width: 700px;
+                height: 400px;
+                width: 600px;
                 color: black;
                 padding-top: 210px;
 
@@ -26,19 +23,53 @@
                 font-family: cursive;
                 font-size: 28px;
             }
+            button{
+                background-color: lightgray;
+                border-radius: 5px;
+                box-shadow: 1px 1px 4px black;
+                cursor: pointer;
+                margin-bottom: 50px;
+            }
+            #qr{
+                height:auto;
+                width: auto;
+                  background-image: url(quote.jpg);
+                background-size: cover;
+                text-align: center;
+
+                background-repeat: no-repeat;
+                background-blend-mode: lighten;
+            }
+            #info{
+                height: 30px;
+                width: auto;
+                color: white;
+                background-color: grey;
+                margin-top: 20px;
+            }
+            a{
+                text-decoration: none;
+                color: white;
+                font-size: 25px;
+            }
         </style>
          </head>
     <body>
+        <div id="qr">
+                <h1>QUOTE GENERATOR</h1>
        <center><div id="thequote">
             <p ><q id="quote"></q></p>
         </div>
        </center>
        <br/>
-       <br/>
-       <br/>
-       <br/>
 <br/>
        <button onclick="gen()">generate</button>
+   </div>
+   <div id="info">
+    <center>
+Created by <a href="https://www.linkedin.com/in/janardhana-rajesh-ab1724285/">janardhan rajesh</a>
+</center>
+   </div>
     <script>
         document.getElementById('quote').style.display="none"
 
