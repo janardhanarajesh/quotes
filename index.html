@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>QUOTES</title>
+        <title>All in one</title>
         <style>
             *{
                 box-sizing:border-box;
@@ -24,7 +24,7 @@
                 font-size: 40px;
                 font-weight: 80px;
             }
-            button{
+            #donbtn{
                 background-color: lightgray;
                 border-radius: 5px;
                 box-shadow: 1px 1px 4px black;
@@ -48,16 +48,45 @@
                 background-color: grey;
                 margin-top: 20px;
             }
-            a{
+            #aut{
                 text-decoration: none;
                 color: white;
                 font-size: 25px;
+            }
+            #menu{
+                height:200px;
+                width: 200px;
+                background:rgba(0, 0, 0, 0.4);
+                position:fixed;
+                top:26px;
+                left:30px;
+                border-radius: 10px;
+                padding-top: 80px;
+
+            }
+            .menu{
+                color:white;
+                text-decoration: none;
+                font-size: 18px;
+
+            }
+            .menu:hover{
+                font-size: 30px;
+            }
+            #tpbtn{
+                position: relative;
+                right:580px;
+                cursor: pointer;
+                border-radius: 10px;
+                height: 25px;
+                width:80px;
             }
         </style>
          </head>
     <body>
         <div id="qr">
-            <h1 style="float: left;"><a href="memorygame.html">memory game</a></h1>
+            <button onclick="menu()" id="tpbtn">Menu</button>
+            <div id="menu"><a href="memorygame.html" class="menu">memory game</a></div>
                 <h1>QUOTE GENERATOR</h1>
        <center><div id="thequote">
             <p ><q id="quote"></q></p>
@@ -65,11 +94,12 @@
        </center>
        <br/>
 <br/>
-       <button onclick="gen()">generate</button>
-   </div>
+       <button onclick="gen()" id="donbtn">generate</button>
+    <marquee>   <h1 style="color:white;">***The full version of this website is coming soon***</h1></marquee>
+         </div>
    <div id="info">
     <center>
-Created by <a href="https://www.linkedin.com/in/janardhana-rajesh-ab1724285/">janardhan rajesh</a>
+Created by <a href="https://www.linkedin.com/in/janardhana-rajesh-ab1724285/" id="aut">janardhan rajesh</a>
 </center>
    </div>
     <script>
@@ -96,6 +126,20 @@ Created by <a href="https://www.linkedin.com/in/janardhana-rajesh-ab1724285/">ja
 
         var rand=quay[Math.floor(Math.random()*quay.length)]
         var quote=document.getElementById('quote').innerHTML=rand;
+        }
+            document.getElementById('menu').style.display="none"
+var i=0;
+        menu=()=>
+        {
+            i++;
+
+            document.getElementById('menu').style.display="inline"
+            if(i==2)
+            {
+            document.getElementById('menu').style.display="none"
+i=0;
+            }
+
         }
     </script>
     </body>
